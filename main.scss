@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background: linear-gradient(45deg, #dd3e54, #6be585);
+    height: 80px;
+    &__list {
+        list-style: none;
+        display: flex;
+        &-item {
+            padding: 0 30px;
+            line-height: 80px;
+            text-transform: capitalize;
+            font-size: 20px;
+            @media only screen and (max-width: 600px) {
+                font-size: 10px;
+            }
+            &--right {
+                margin-left: auto;
+            }
+            & a {
+                text-decoration: none;
+                color: white;
+                &:hover {
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+.container {
+    background: linear-gradient(top, #654ea3, #eaafc8);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & h1 {
+        color: white;
+        text-transform: uppercase;
+        transition: all 1s;
+        &:hover {
+            transform: scale(5) rotate(1turn);
+        }
+        @media only screen and (max-width: 600px) {
+            &:hover {
+                transform: scale(2) rotate(1turn);
+            }
+        }
+    }
+}
+
+.product {
+    background-color: darken($color: #000000, $amount: 0);
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 30px 20px;
+    padding: 20px;
+    &__card {
+        &-img {
+            background-color: blueviolet;
+            width: 100%;
+            height: 200px;
+            display: block;
+        }
+        &__content {
+            background-color: whitesmoke;
+            padding: 50px 10px;
+            &__list {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                text-transform: capitalize;
+                &-item {
+                    padding: 10px 30px;
+                }
+            }
+        }
+        &-text {
+            padding: 40px 0px;
+        }
+        &-link {
+            background-color: darkcyan;
+            padding: 10px 15px;
+            border-radius: 10px;
+            color: whitesmoke;
+            text-decoration: none;
+            text-transform: capitalize;
+            &:hover {
+                background-color: chocolate;
+            }
+        }
+    }
+}
+
+.footer {
+    height: auto;
+    width: auto;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    &__content {
+        width: auto;
+        padding: 20px 20px;
+        margin: 10px 90px;
+        border-left: 1px solid gray;
+        background: rgb(196, 191, 191);
+        &__list {
+            list-style: none;
+            &-item {
+                text-transform: capitalize;
+                line-height: 24px;
+                font-size: 20px;
+                & a {
+                    color: black;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
